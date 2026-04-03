@@ -8,46 +8,164 @@ import os
 version_float = 1.1
 
 questions = [
-    {"q": "How often do you feel overwhelmed by your responsibilities?",
-     "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
-    {"q": "How well do you sleep at night?",
-     "opts": [("Very well",0),("Fairly well",1),("Occasionally restless",2),("Often restless",3),("Very poorly",4)]},
-    {"q": "How often do you feel anxious about your academic performance?",
-     "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
-    {"q": "How would you rate your ability to concentrate on studies?",
-     "opts": [("Excellent",0),("Good",1),("Fair",2),("Poor",3),("Very poor",4)]},
-    {"q": "How often do you feel isolated from peers?",
-     "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
-    {"q": "How satisfied are you with your social life?",
-     "opts": [("Very satisfied",0),("Satisfied",1),("Neutral",2),("Dissatisfied",3),("Very dissatisfied",4)]},
-    {"q": "How often do you experience physical symptoms of stress (headaches, fatigue)?",
-     "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
-    {"q": "How well do you manage your time?",
-     "opts": [("Very well",0),("Well",1),("Adequately",2),("Poorly",3),("Very poorly",4)]},
-    {"q": "How often do you feel pressure to meet deadlines?",
-     "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
-    {"q": "How would you rate your overall mental well-being?",
-     "opts": [("Excellent",0),("Good",1),("Fair",2),("Poor",3),("Very poor",4)]},
-    {"q": "How often do you engage in relaxation activities?",
-     "opts": [("Daily",0),("Several times a week",1),("Weekly",2),("Rarely",3),("Never",4)]},
-    {"q": "How supported do you feel by your instructors?",
-     "opts": [("Very supported",0),("Supported",1),("Neutral",2),("Unsupported",3),("Very unsupported",4)]},
-    {"q": "How often do you worry about your future career?",
-     "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
-    {"q": "How would you rate your financial stress level?",
-     "opts": [("None",0),("Mild",1),("Moderate",2),("High",3),("Severe",4)]},
-    {"q": "How often do you feel optimistic about your academic journey?",
-     "opts": [("Always",0),("Often",1),("Sometimes",2),("Rarely",3),("Never",4)]}
+    {
+        "q": "How does walking affect your physical condition during the day?",
+        "opts": [
+            ("It greatly improves my energy and physical condition", 0),
+            ("It slightly improves my condition", 1),
+            ("It has no noticeable effect", 2),
+            ("It sometimes makes me feel tired", 3),
+            ("It makes me feel more physically exhausted", 4)
+        ]
+    },
+    {
+        "q": "After finishing your daily tasks, how do you feel about going for a walk?",
+        "opts": [
+            ("I feel motivated and energized to walk", 0),
+            ("I am willing to walk with little effort", 1),
+            ("I feel neutral about it", 2),
+            ("I feel somewhat tired but may still walk", 3),
+            ("I feel too tired and avoid walking", 4)
+        ]
+    },
+    {
+        "q": "To what extent do you believe walking helps reduce your stress?",
+        "opts": [
+            ("It reduces my stress significantly", 0),
+            ("It helps reduce stress", 1),
+            ("It has a small effect", 2),
+            ("It rarely helps", 3),
+            ("It does not help at all", 4)
+        ]
+    },
+    {
+        "q": "When going for a walk, how do you usually choose your location?",
+        "opts": [
+            ("I always choose calm or pleasant walking areas", 0),
+            ("I often prefer comfortable locations", 1),
+            ("I sometimes consider the location", 2),
+            ("I rarely think about where I walk", 3),
+            ("I do not consider location at all", 4)
+        ]
+    },
+    {
+        "q": "What is your opinion about walking as a daily activity?",
+        "opts": [
+            ("It is very valuable and beneficial", 0),
+            ("It is useful", 1),
+            ("It is neutral to me", 2),
+            ("It feels slightly unnecessary", 3),
+            ("It feels like a waste of time", 4)
+        ]
+    },
+    {
+        "q": "How regularly do you go for walks intentionally?",
+        "opts": [
+            ("Daily", 0),
+            ("Several times a week", 1),
+            ("Occasionally", 2),
+            ("Rarely", 3),
+            ("Never", 4)
+        ]
+    },
+    {
+        "q": "After walking, how do you usually feel mentally?",
+        "opts": [
+            ("Very refreshed", 0),
+            ("Refreshed", 1),
+            ("Neutral", 2),
+            ("Slightly tired", 3),
+            ("Mentally drained", 4)
+        ]
+    },
+    {
+        "q": "How often do you reach your personal daily step goal?",
+        "opts": [
+            ("Always", 0),
+            ("Often", 1),
+            ("Sometimes", 2),
+            ("Rarely", 3),
+            ("Never", 4)
+        ]
+    },
+    {
+        "q": "How often do you consider participating in walking or fitness events (e.g., step challenges, marathon)?",
+        "opts": [
+            ("Very often", 0),
+            ("Often", 1),
+            ("Sometimes", 2),
+            ("Rarely", 3),
+            ("Never", 4)
+        ]
+    },
+    {
+        "q": "How strongly do you agree that regular physical activity (e.g., walking, running) improves overall health?",
+        "opts": [
+            ("Strongly agree", 0),
+            ("Agree", 1),
+            ("Neutral", 2),
+            ("Disagree", 3),
+            ("Strongly disagree", 4)
+        ]
+    },
+    {
+        "q": "How would you rate your overall mental well-being?",
+        "opts": [
+            ("Excellent", 0),
+            ("Good", 1),
+            ("Average", 2),
+            ("Poor", 3),
+            ("Very poor", 4)
+        ]
+    },
+    {
+        "q": "How frequently do you feel calm and relaxed?",
+        "opts": [
+            ("Always", 0),
+            ("Often", 1),
+            ("Sometimes", 2),
+            ("Rarely", 3),
+            ("Never", 4)
+        ]
+    },
+    {
+        "q": "How often do you experience difficulty concentrating?",
+        "opts": [
+            ("Never", 0),
+            ("Rarely", 1),
+            ("Sometimes", 2),
+            ("Often", 3),
+            ("Always", 4)
+        ]
+    },
+    {
+        "q": "How often do you track your daily step count or walking distance?",
+        "opts": [
+            ("Always", 0),
+            ("Often", 1),
+            ("Sometimes", 2),
+            ("Rarely", 3),
+            ("Never", 4)
+        ]
+    },
+    {
+        "q": "When attempting longer walking distances, how often do you experience physical discomfort or minor injuries?",
+        "opts": [
+            ("Never", 0),
+            ("Rarely", 1),
+            ("Sometimes", 2),
+            ("Often", 3),
+            ("Always", 4)
+        ]
+    }
 ]
 
-psych_states = {
-    "Very Low Stress": (0, 15),
-    "Low Stress": (16, 30),
-    "Moderate Stress": (31, 45),
-    "High Stress": (46, 60),
-    "Very High Stress": (61, 75),
-    "Severe Stress": (76, 90),
-    "Critical State": (91, 200)
+interpret_score = {
+    "Excellent vitality": (0, 12),
+    "Good correlation": (13, 24),
+    "Moderate vitality": (25, 36),
+    "Low vitality": (37, 48),
+    "Very low vitality": (49, 60)
 }
 
 # ---------------- HELPERS ----------------
@@ -72,8 +190,8 @@ def save_json(filename: str, data: dict):
         json.dump(data, f, indent=2)
 
 # ---------------- STREAMLIT APP ----------------
-st.set_page_config(page_title="Student Psychological Survey")
-st.title("📝 Student Psychological Survey")
+st.set_page_config(page_title="Daily Step Count and Mental Vitality Survey")
+st.title("📝 Daily Step Count and Mental Vitality Survey")
 
 st.info("Please fill out your details and answer all questions honestly.")
 
